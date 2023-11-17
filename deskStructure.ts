@@ -6,8 +6,6 @@ export const structure: StructureResolver = async (S, context) => {
   return S.list()
     .title('Content')
     .items([
-      ...S.documentTypeListItems(),
-      S.divider(),
       S.listItem().title('Admin Tools:').showIcon(false),
       S.listItem()
         .title('Posts by category')
@@ -45,5 +43,7 @@ export const structure: StructureResolver = async (S, context) => {
               })
             )
         ),
+      S.divider(),
+      ...S.documentTypeListItems(),
     ])
 }
