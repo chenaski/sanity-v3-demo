@@ -12,6 +12,7 @@ export const structure: StructureResolver = async (S, context) => {
         .child(
           S.list()
             .title('Categories')
+              .canHandleIntent(() => true)
             .items(
               CATEGORIES.map((category) => {
                 return S.listItem()

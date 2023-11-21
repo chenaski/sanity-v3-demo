@@ -4,7 +4,6 @@ import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemas'
 import {categoryBadge} from './badges/categoryBadge'
 import {ChangeCategoryAction} from './actions/changePostCategory'
-import {createPostsAndAuthors} from './tools/createPostsAndAuthors'
 import {structure} from './deskStructure'
 
 export default defineConfig({
@@ -19,8 +18,6 @@ export default defineConfig({
   schema: {
     types: schemaTypes,
   },
-
-  tools: [createPostsAndAuthors()],
 
   document: {
     badges: [categoryBadge],
